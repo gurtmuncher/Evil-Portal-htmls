@@ -12,6 +12,7 @@ Some evil portal htmls I made.
 
 - Google-Login.html - A google sign in that I tried to make look as close to the real thing as I could
 - FaceBook-Login.html - A facebook sign in that I tried to make look as close to the real thing as I could
+- Spectrum-Login - A Spectrum sign in that I tried to make look as close to the real thing as I could
 
 ## How to use
 

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Evil Portal Collection</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="container">
+    <h1>Evil Portal Collection</h1>
+    <p class="subtitle" id="subtitle"></p>
+    <div class="portal-grid" id="portals"></div>
+    <div class="footer">For use with Marauder on esp32 dev-board and Flipper Zero</div>
+</div>
+
+<div class="modal-overlay" id="modal">
+    <div class="modal">
+        <h2>Download Portal</h2>
+        <p>These files are for educational purposes only. Only use if you have explicit permission to test.</p>
+        <p>I gurtmuncher am not responsible if you do something stupid with this, by downloading, you agree to use this responsibly.</p>
+        <label class="checkbox-wrap">
+            <input type="checkbox" id="agreeCheck">
+            <span>I have read and understand</span>
+        </label>
+        <div class="modal-btns">
+            <button class="modal-btn cancel" onclick="closeModal()">Cancel</button>
+            <button class="modal-btn confirm" id="confirmDownload" disabled>Download</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    let pendingDownload = null;
+
+    fetch('/api/portals')
+        .then(res => res.json())
+        .then(portals => {
+            document.getElementById('subtitle').textContent = portals.length + ' html' + (portals.length !== 1 ? 's' : '');
+
+            if (portals.length === 0) {
+                document.getElementById('portals').innerHTML = '<div class="empty-state"><p>No portals found</p><p>Add .html files to the /portals folder</p></div>';
+                return;
+            }
+
+            document.getElementById('portals').innerHTML = portals.map(p => `
+                    <div class="portal-card">
+                        <div class="portal-name">${p.name}</div>
+                        <div class="portal-file">${p.file}</div>
+                        <div class="portal-btns">
+                            <a href="/portals/${p.file}" class="portal-btn">Preview</a>
+                            <button class="portal-btn download" onclick="openModal('${p.file}')">Download</button>
+                        </div>
+                    </div>
+                `).join('');
+        });
+
+    function openModal(file) {
+        pendingDownload = file;
+        document.getElementById('agreeCheck').checked = false;
+        document.getElementById('confirmDownload').disabled = true;
+        document.getElementById('modal').classList.add('active');
+    }
+
+    function closeModal() {
+        document.getElementById('modal').classList.add('closing');
+        setTimeout(() => {
+            document.getElementById('modal').classList.remove('active', 'closing');
+            pendingDownload = null;
+        }, 200);
+    }
+
+    document.getElementById('agreeCheck').onchange = function() {
+        document.getElementById('confirmDownload').disabled = !this.checked;
+    };
+
+    document.getElementById('confirmDownload').onclick = function() {
+        if (pendingDownload && !this.disabled) {
+            const a = document.createElement('a');
+            a.href = '/portals/' + pendingDownload;
+            a.download = pendingDownload;
+            a.click();
+            closeModal();
+        }
+    };
+
+    document.getElementById('modal').onclick = function(e) {
+        if (e.target === this) closeModal();
+    };
+</script>
+</body>
+</html>

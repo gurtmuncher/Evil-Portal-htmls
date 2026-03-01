@@ -10,7 +10,8 @@ Some evil portal htmls I made.
 
 ## Files
 
-- Google-identical.html - A google sign in that I tried to make look as close to the real thing as I could
+- Google-Login.html - A google sign in that I tried to make look as close to the real thing as I could
+- FaceBook-Login.html - A facebook sign in that I tried to make look as close to the real thing as I could
 
 ## How to use
 
@@ -31,7 +32,7 @@ I use Momentum custom firmware and I would recommend installing that on your fli
 
 ## Disclaimer
 
-Only use this if you have explicit permission to. I am not responsible if you do something stupid with this. This was also built purely for educational purposes.
+Only use this if you have explicit permission to. I gurtmuncher am not responsible if you do something stupid with this. This was also built purely for educational purposes.
 ## Credits
 
 I made these using htmls I found here for reference https://github.com/bigbrodude6119/flipper-zero-evil-portal. The styling is based on how these sites actually look.

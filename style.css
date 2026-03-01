@@ -1,0 +1,174 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+    background: #111;
+    color: #ccc;
+    min-height: 100vh;
+    padding: 48px 24px;
+}
+
+.container { max-width: 800px; margin: 0 auto; }
+
+h1 { font-size: 24px; font-weight: 500; margin-bottom: 6px; color: #fff; }
+
+.subtitle { color: #666; font-size: 14px; margin-bottom: 32px; }
+
+.portal-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.portal-card {
+    background: #1a1a1a;
+    border-radius: 8px;
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.portal-card:hover { background: #202020; }
+
+.portal-name { font-size: 15px; color: #eee; }
+
+.portal-file { font-size: 12px; color: #555; font-family: monospace; flex: 1; }
+
+.portal-btns {
+    display: flex;
+    gap: 8px;
+}
+
+.portal-btn {
+    padding: 8px 16px;
+    background: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 13px;
+    border: none;
+    cursor: pointer;
+}
+
+.portal-btn:hover { background: #444; }
+
+.portal-btn.download { background: #2a2a2a; }
+
+.portal-btn.download:hover { background: #383838; }
+
+.empty-state { padding: 40px; color: #555; font-size: 14px; }
+
+.footer {
+    margin-top: 48px;
+    color: #444;
+    font-size: 12px;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+
+.modal-overlay.active {
+    display: flex;
+    background: rgba(0,0,0,0.8);
+}
+
+.modal-overlay.closing {
+    background: rgba(0,0,0,0);
+}
+
+.modal {
+    background: #1a1a1a;
+    padding: 28px;
+    border-radius: 10px;
+    max-width: 400px;
+    width: 90%;
+    transform: scale(0.9);
+    opacity: 0;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+.modal-overlay.active .modal {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.modal-overlay.closing .modal {
+    transform: scale(0.9);
+    opacity: 0;
+}
+
+.modal h2 {
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 16px;
+}
+
+.modal p {
+    font-size: 14px;
+    color: #999;
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+.checkbox-wrap {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 16px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #ccc;
+}
+
+.checkbox-wrap input {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.modal-btns {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    justify-content: flex-end;
+}
+
+.modal-btn {
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+}
+
+.modal-btn.cancel {
+    background: #333;
+    color: #ccc;
+}
+
+.modal-btn.cancel:hover { background: #444; }
+
+.modal-btn.confirm {
+    background: #fff;
+    color: #111;
+}
+
+.modal-btn.confirm:hover { background: #ddd; }
+
+.modal-btn.confirm:disabled {
+    background: #444;
+    color: #777;
+    cursor: not-allowed;
+}

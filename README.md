@@ -14,16 +14,16 @@ Some evil portal htmls I made.
 
 ## How to use
 
-1. Take your sd card out your flipper and put it into your micro sd card reader and plug it into your pc and go to apps_data → evil_portal in qflipper or your file browser then paste the htmls
-2. Put the sd card back in your Flipper and Open GPIO in apps then ESP then click on [ESP32]Evil Portal
+1. Take your sd card out your flipper and put it into your micro sd card reader and plug it into your pc and go to apps_data → evil_portal → html in qflipper or your file browser and then paste the htmls
+2. Put the sd card back in your Flipper and Open apps  → GPIO  → ESP → [ESP32]Evil Portal
 3. Pick your html file and start the portal
 
 ## How it works
 
-When you make the evil portal it looks like a legit network. Someone may click on this network and when they do the html of your choosing will popup a legit looking sign in page and when they type in there credentials it grabs them via /get and logs them on your flipper showing their login and password
+When you make the evil portal it looks like a legit network. Someone may click on this network and when they do the html of your choosing will show a legit looking sign-in-page and when they type in there credentials it grabs them via /get and logs them on your flipper showing their login and password
 ## Changing stuff
 
-If you wanna change things just edit the html. The form sends to /get which is what marauder uses. You can change the placeholder text or colors or whatever.
+If you wanna change things just edit the html.
 
 ## Disclaimer
 

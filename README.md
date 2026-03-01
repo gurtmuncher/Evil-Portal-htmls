@@ -25,6 +25,10 @@ When you make the evil portal it looks like a legit network. Someone may click o
 
 If you wanna change things just edit the html.
 
+## Also
+
+I use Momentum custom firmware and I would recommend installing that on your flipper https://momentum-fw.dev/
+
 ## Disclaimer
 
 Only use this if you have explicit permission to. I am not responsible if you do something stupid with this. This was also built purely for educational purposes.

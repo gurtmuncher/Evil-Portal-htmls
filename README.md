@@ -10,12 +10,13 @@ Some evil portal htmls I made.
 
 ## Files
 
-- Google-Login.html - A google sign in that I tried to make look as close to the real thing as I could
-- FaceBook-Login.html - A facebook sign in that I tried to make look as close to the real thing as I could
+- Google-Login - A google sign in that I tried to make look as close to the real thing as I could
+- FaceBook-Login - A facebook sign in that I tried to make look as close to the real thing as I could
 - Spectrum-Login - A Spectrum sign in that I tried to make look as close to the real thing as I could
 - Microsoft-Login - A Microsoft sign in that I tried to make look as close to the real thing as I could
 - AT&T-Login - A AT&T sign in that I tried to make look as close to the real thing as I could
-- Apple - A Apple sign in that I tried to make look as close to the real thing as I could
+- Apple-Login - A Apple sign in that I tried to make look as close to the real thing as I could
+- Dell-Login - A Dell sign in that I tried to make look as close to the real thing as I could
 
 ## How to use
 

@@ -33,8 +33,14 @@
 <script>
     let pendingDownload = null;
 
-    fetch('/api/portals')
-        .then(res => res.json())
+    fetch('/api/portals.json')
+        .then(async (res) => {
+            if (!res.ok) {
+                const text = await res.text();
+                throw new Error('Failed to load /api/portals.json (' + res.status + '): ' + text.slice(0, 120));
+            }
+            return res.json();
+        })
         .then(portals => {
             document.getElementById('subtitle').textContent = portals.length + ' html' + (portals.length !== 1 ? 's' : '');
 
@@ -53,6 +59,10 @@
                         </div>
                     </div>
                 `).join('');
+        })
+        .catch(err => {
+            document.getElementById('subtitle').textContent = 'error';
+            document.getElementById('portals').innerHTML = '<div class="empty-state"><p>Could not load portals list</p><p>' + String(err.message) + '</p></div>';
         });
 
     function openModal(file) {

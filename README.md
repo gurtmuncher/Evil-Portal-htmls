@@ -17,6 +17,7 @@ Some evil portal htmls I made.
 - AT&T-Login - A AT&T sign in that I tried to make look as close to the real thing as I could
 - Apple-Login - A Apple sign in that I tried to make look as close to the real thing as I could
 - Dell-Login - A Dell sign in that I tried to make look as close to the real thing as I could
+- Github-Login - A Github sign in that I tried to make look as close to the real thing as I could
 
 ## How to use
 

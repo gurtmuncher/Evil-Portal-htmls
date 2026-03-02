@@ -15,6 +15,7 @@ Some evil portal htmls I made.
 - Spectrum-Login - A Spectrum sign in that I tried to make look as close to the real thing as I could
 - Microsoft-Login - A Microsoft sign in that I tried to make look as close to the real thing as I could
 - AT&T-Login - A AT&T sign in that I tried to make look as close to the real thing as I could
+- Apple - A Apple sign in that I tried to make look as close to the real thing as I could
 
 ## How to use
 
@@ -24,7 +25,7 @@ Some evil portal htmls I made.
 
 ## How it works
 
-When you make the evil portal it looks like a legit network. Someone may click on this network and when they do the html of your choosing will show a legit looking sign-in-page and when they type in there credentials it grabs them via /get and logs them on your flipper showing their login and password
+When you make the evil portal it looks like a legit network. Someone may click on this network and when they do the html of your choosing will show a legit looking sign-in-page and when they type in there credentials it grabs them via /get and logs them on your flipper showing their login and password. Do not do this though that was just an example
 ## Changing stuff
 
 If you wanna change things just edit the html.

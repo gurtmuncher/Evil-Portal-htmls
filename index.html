@@ -3,14 +3,15 @@
 <head>
     <title>Evil Portal Collection</title>
     <link rel="stylesheet" href="/style.css">
+    <meta name="description" content="Land of the Evil Portal htmls I made">
 </head>
 <body>
 <div class="container">
     <h1>Evil Portal Collection</h1>
     <p class="subtitle" id="subtitle"></p>
-    <button class="download-all-btn" onclick="openModal('all')">Download All</button>
     <div class="portal-grid" id="portals"></div>
-    <div class="footer">For use with Marauder on esp32 dev-board / Flipper Zero</div>
+    <div class="footer">For use with Marauder on esp32 dev-board and Flipper Zero</div>
+    <div class="footer"> For instruction on how to use come to the <a href="https://github.com/gurtmuncher/Evil-Portal-htmls">GitHub</a></div>
 </div>
 
 <div class="modal-overlay" id="modal">
@@ -31,12 +32,16 @@
 
 <script>
     let pendingDownload = null;
-    let allPortals = [];
 
-    fetch('/api/portals')
-        .then(res => res.json())
+    fetch('/api/portals.json')
+        .then(async (res) => {
+            if (!res.ok) {
+                const text = await res.text();
+                throw new Error('Failed to load /api/portals.json (' + res.status + '): ' + text.slice(0, 120));
+            }
+            return res.json();
+        })
         .then(portals => {
-            allPortals = portals;
             document.getElementById('subtitle').textContent = portals.length + ' html' + (portals.length !== 1 ? 's' : '');
 
             if (portals.length === 0) {
@@ -54,6 +59,10 @@
                         </div>
                     </div>
                 `).join('');
+        })
+        .catch(err => {
+            document.getElementById('subtitle').textContent = 'error';
+            document.getElementById('portals').innerHTML = '<div class="empty-state"><p>Could not load portals list</p><p>' + String(err.message) + '</p></div>';
         });
 
     function openModal(file) {
@@ -77,21 +86,10 @@
 
     document.getElementById('confirmDownload').onclick = function() {
         if (pendingDownload && !this.disabled) {
-            if (pendingDownload === 'all') {
-                allPortals.forEach((p, i) => {
-                    setTimeout(() => {
-                        const a = document.createElement('a');
-                        a.href = '/portals/' + p.file;
-                        a.download = p.file;
-                        a.click();
-                    }, i * 300);
-                });
-            } else {
-                const a = document.createElement('a');
-                a.href = '/portals/' + pendingDownload;
-                a.download = pendingDownload;
-                a.click();
-            }
+            const a = document.createElement('a');
+            a.href = '/portals/' + pendingDownload;
+            a.download = pendingDownload;
+            a.click();
             closeModal();
         }
     };

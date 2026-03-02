@@ -42,7 +42,7 @@ Only use this if you have explicit permission to. I gurtmuncher am not responsib
 
 ## How To Prevent This From Happening To You
 
-Just don't be an idoit and connect to random "Free" networks, even if you do that don't be even stupider and type in your account info on a random network and allways check the url before you type in your username and password maek SURE its a trusted https site. 
+Just don't be an idoit and connect to random "Free" networks, even if you do that don't be even stupider and type in your account info on a random network and allways check the url before you type in your username and password and make SURE it's a trusted https site.
 
 ## Credits
 

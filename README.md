@@ -35,7 +35,7 @@ I use Momentum custom firmware and I would recommend installing that on your fli
 
 ## Disclaimer
 
-Only use this if you have explicit permission to. I gurtmuncher am not responsible if you do something stupid with this. This was also built purely for educational purposes.
+Only use this if you have explicit permission to. I gurtmuncher am not responsible if you do something stupid with this. This was also built purely for educational purposes. Also DO NOT use these htmls to steal/take peoples info these htmls are for educational purposes only
 ## Credits
 
 I made these using htmls I found here for reference https://github.com/bigbrodude6119/flipper-zero-evil-portal. The styling is based on how these sites actually look. Just to be clear I did NOT make evil portal that was someone else these are just htmls I made for evil portal.

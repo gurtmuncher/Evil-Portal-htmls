@@ -3,5 +3,6 @@
   { "file": "Google-Login.html", "name": "Google Login" },
   { "file": "Spectrum-Login.html", "name": "Spectrum Login" },
   { "file": "Microsoft-Login.html", "name": "Microsoft Login" },
-  { "file": "AT&T-Login.html", "name": "AT&T Login" }
+  { "file": "AT&T-Login.html", "name": "AT&T Login" },
+  { "file": "Apple-Login.html", "name": "Apple Login" }
 ]

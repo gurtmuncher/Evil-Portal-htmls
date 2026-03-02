@@ -27,18 +27,23 @@ Some evil portal htmls I made.
 
 ## How it works
 
-When you make the evil portal it looks like a legit network. Someone may click on this network and when they do the html of your choosing will show a legit looking sign-in-page and when they type in there credentials it grabs them via /get and logs them on your flipper showing their login and password. Do not do this though that was just an example
+When you make the evil portal it creates a rouge access point that looks like a legit network. You can control the name of this network and name it say "Free_airport_wifi69" Someone may click on this network and when they do the html of your choosing will pop up showing a legit looking sign-in-page and people thinking it's real and that they just have to sign in to use this network, they type in their credentials. When they type in their credentials it grabs them via /get and logs them on your flipper showing their login and password. Do not do this though that was just an example
 ## Changing stuff
 
 If you wanna change things just edit the html.
 
 ## Also
 
-I use Momentum custom firmware and I would recommend installing that on your flipper https://momentum-fw.dev/
+I use Momentum custom firmware and I recommend installing this on your flipper to do evil portal https://momentum-fw.dev/
 
 ## Disclaimer
 
 Only use this if you have explicit permission to. I gurtmuncher am not responsible if you do something stupid with this. This was also built purely for educational purposes. Also DO NOT use these htmls to steal/take peoples info these htmls are for educational purposes only
+
+## How To Prevent This From Happening To You
+
+Just don't be an idoit and connect to random "Free" networks, even if you do that don't be even stupider and type in your account info on a random network and allways check the url before you type in your username and password maek SURE its a trusted https site. 
+
 ## Credits
 
 I made these using htmls I found here for reference https://github.com/bigbrodude6119/flipper-zero-evil-portal. The styling is based on how these sites actually look. Just to be clear I did NOT make evil portal that was someone else these are just htmls I made for evil portal.

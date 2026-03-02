@@ -5,5 +5,6 @@
   { "file": "Microsoft-Login.html", "name": "Microsoft Login" },
   { "file": "AT&T-Login.html", "name": "AT&T Login" },
   { "file": "Apple-Login.html", "name": "Apple Login" },
-  { "file": "Dell-Login.html", "name": "Dell Login" }
+  { "file": "Dell-Login.html", "name": "Dell Login" },
+  { "file": "Github-Login.html", "name": "Github Login" }
 ]
